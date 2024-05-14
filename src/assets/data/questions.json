@@ -1,0 +1,26 @@
+{
+    "Tema 1" : [
+        {
+            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
+            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
+        }
+    ],
+    "Tema 2" : [
+        {
+            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
+            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
+        }
+    ],
+    "Tema 3" : [
+        {
+            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
+            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
+        }
+    ],
+    "Tema 4" : [
+        {
+            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
+            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
+        }
+    ]
+}
