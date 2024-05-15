@@ -1,9 +1,14 @@
 {
     "Tema 1" : [
         {
-            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
-            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
+            "question": "1",
+            "options": ["ARGENTINA", "MEXICO", "ESPAÑA"]
+        },
+        {
+            "question": "2",
+            "options": ["Hola", "Chau", "ESPAÑA"]
         }
+        
     ],
     "Tema 2" : [
         {

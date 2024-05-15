@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react'
+import './App.scss';
+import Home from './pages/home/Home';
+import Roulette from './pages/roulette/Roulette';
+import Trivia from './pages/trivia/Trivia';
+import End from './pages/end/End';
+import QR from './pages/qr/QR';
 
 function App() {
+  const [page, setPage] = useState(2);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {page === 0 && <Home goToNextPage={() => {setPage(1)}}/>}
+      {page === 1 && <Roulette goToNextPage={() => {setPage(2)}}/>}
+      {page === 2 && <Trivia topic={"Tema 1"} intervalTime={3} goToNextPage={() => {setPage(3)}}/>}
+      {page === 3 && <End goToNextPage={() => {setPage(4)}}/>}
+      {page === 4 && <QR goToNextPage={() => {setPage(0)}}/>}
+    </>
   );
 }
 
