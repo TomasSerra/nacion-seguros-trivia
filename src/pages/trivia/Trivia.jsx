@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import './Trivia.scss'
+import Logo from './../../assets/imgs/trivia/logo.png'
 
 function Trivia({topic, goToNextPage, intervalTime, questions}) {
   const [actualQuestion, setActualQuestion] = useState('')
@@ -9,6 +10,7 @@ function Trivia({topic, goToNextPage, intervalTime, questions}) {
   const [questionOrder, setQuestionOrder] = useState([])
   const [indexOfActualQuestion, setIndexOfActualQuestion] = useState(0)
   const [hasAnsweredCorrect, setHasAnsweredCorrect] = useState(0)
+  const [answers, setAnswers] = useState({}) //Puede ser borrado si no se quiere guardar las respuestas
   
   const thisQuestions = questions[topic];
 
@@ -49,9 +51,11 @@ function Trivia({topic, goToNextPage, intervalTime, questions}) {
   const checkAnswer = (answer) => {
     if(answer === actualCorrect){
       setHasAnsweredCorrect(true)
+      setAnswers(prev => ({...prev, [actualQuestion]: 1})) //Puede ser borrado si no se quiere guardar las respuestas
     }
     else{
       setHasAnsweredCorrect(false)
+      setAnswers(prev => ({...prev, [actualQuestion]: 0})) //Puede ser borrado si no se quiere guardar las respuestas
     }
     setTimeout(() => {
       if(indexOfActualQuestion < thisQuestions.length){
@@ -59,14 +63,41 @@ function Trivia({topic, goToNextPage, intervalTime, questions}) {
         nextQuestion()
       }
       else{
+        storageAnswers(answer === actualCorrect) //Puede ser borrado si no se quiere guardar las respuestas
         goToNextPage()
       }
     }, intervalTime*1000)
   }
 
+  // ***** OPCIONAL *****
+
+  const storageAnswers = (correct) => {
+    let newAnswers = answers
+    newAnswers[actualQuestion] = correct ? 1 : 0;
+    localStorage.setItem('answers', JSON.stringify(modifyJSON(answers)));
+  }
+
+  const modifyJSON = (actualAnswers) => {
+    const transformedResponses = localStorage.getItem('answers') == null ? {} : JSON.parse(localStorage.getItem('answers'));
+    for (const [question, answer] of Object.entries(actualAnswers)) {
+      if (!transformedResponses[question]) {
+        transformedResponses[question] = { correctas: answer, total: 1 };
+      }
+      else{
+        transformedResponses[question]["total"] += 1;
+        transformedResponses[question]["correctas"] += answer;
+      }
+    }
+    return transformedResponses;
+  }
+
+  // *******************
+
   return (
     <div className='trivia-page'>
-        <div className="top-section"></div>
+        <div className="top-section">
+          <img src={Logo} />
+        </div>
         <div className="question-section">
             <div className="question-container">
                 <h2>{actualQuestion}</h2>
