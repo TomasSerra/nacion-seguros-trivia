@@ -1,31 +1,75 @@
 {
-    "Tema 1" : [
-        {
-            "question": "1",
-            "options": ["ARGENTINA", "MEXICO", "ESPAÑA"]
-        },
-        {
-            "question": "2",
-            "options": ["Hola", "Chau", "ESPAÑA"]
-        }
-        
+    "Tema 1": [
+      {
+        "question": "¿Cuál es la capital de Francia?",
+        "options": ["Buenos Aires", "Madrid", "Roma", "París"]
+      },
+      {
+        "question": "¿Qué idioma se habla en Brasil?",
+        "options": ["Español", "Portugués", "Inglés", "Francés"]
+      },
+      {
+        "question": "¿En qué continente está ubicado Egipto?",
+        "options": ["Europa", "Asia", "África", "Oceanía"]
+      },
+      {
+        "question": "¿Cuál es el océano más grande del mundo?",
+        "options": ["Pacífico", "Atlántico", "Índico", "Ártico"]
+      }
     ],
-    "Tema 2" : [
-        {
-            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
-            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
-        }
+    "Tema 2": [
+      {
+        "question": "¿Cuál es el río más largo del mundo?",
+        "options": ["Amazonas", "Nilo", "Misisipi", "Yangtsé"]
+      },
+      {
+        "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
+        "options": ["Miguel de Cervantes", "William Shakespeare", "Federico García Lorca", "Gabriel García Márquez"]
+      },
+      {
+        "question": "¿Cuál es la montaña más alta del mundo?",
+        "options": ["Everest", "K2", "Kangchenjunga", "Makalu"]
+      },
+      {
+        "question": "¿Cuál es el metal más abundante en la corteza terrestre?",
+        "options": ["Hierro", "Aluminio", "Cobre", "Oro"]
+      }
     ],
-    "Tema 3" : [
-        {
-            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
-            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
-        }
+    "Tema 3": [
+      {
+        "question": "¿Cuál es el país más grande del mundo?",
+        "options": ["Rusia", "China", "Estados Unidos", "Canadá"]
+      },
+      {
+        "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
+        "options": ["1939", "1945", "1914", "1941"]
+      },
+      {
+        "question": "¿Quién pintó 'La última cena'?",
+        "options": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Michelangelo"]
+      },
+      {
+        "question": "¿Cuál es la capital de Australia?",
+        "options": ["Sídney", "Melbourne", "Canberra", "Brisbane"]
+      }
     ],
-    "Tema 4" : [
-        {
-            "question": "¿CUÁL ES EL ORIGEN DE RATA BLANCA?",
-            "options": ["ARGENTINA", "MEXICO", "ESPAÑA", "COLOMBIA"]
-        }
+    "Tema 4": [
+      {
+        "question": "¿Cuál es el desierto más grande del mundo?",
+        "options": ["Sahara", "Gobi", "Kalahari", "Antártico"]
+      },
+      {
+        "question": "¿Cuál es el país con más población del mundo?",
+        "options": ["China", "India", "Estados Unidos", "Indonesia"]
+      },
+      {
+        "question": "¿Quién fue el primer presidente de Estados Unidos?",
+        "options": ["George Washington", "Thomas Jefferson", "John Adams", "Abraham Lincoln"]
+      },
+      {
+        "question": "¿Cuál es la moneda de Japón?",
+        "options": ["Yen", "Dólar", "Euro", "Libra esterlina"]
+      }
     ]
-}
+  }
+  

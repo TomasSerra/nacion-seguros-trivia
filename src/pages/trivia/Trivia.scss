@@ -1,0 +1,79 @@
+.trivia-page{
+    height: 100dvh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .top-section{
+        margin-top: 10dvh;
+    }
+
+    .question-section{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        .question-container{
+            font-size: 3vw;
+            color: white;
+            width: 80vw;
+            background-color: rgb(57, 57, 197);
+            height: fit-content;
+            min-height: 40vw;
+            border-radius: 2dvh;
+            padding: 2dvh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2{
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .options-section{
+        width: 100%;
+        height: 50dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .options-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .option-button{
+                font-size: 5vw;
+                border: none;
+                background-color: #cecece;
+                width: 80vw;
+                height: fit-content;
+                padding: 1dvh 0;
+                margin: 1.5dvh 0;
+                color: black;
+                border-radius: 1dvh;
+            }
+            
+            .option-button.correct-option{
+                background-color: green;
+                &:disabled{
+                    opacity: 1;
+                }
+            }
+
+            .option-button.incorrect-option{
+                background-color: red;
+                &:disabled{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

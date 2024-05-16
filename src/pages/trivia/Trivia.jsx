@@ -1,8 +1,7 @@
-import React, {act, useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './Trivia.scss'
-import Questions from '../../assets/data/questions.json'
 
-function Trivia({topic, goToNextPage, intervalTime}) {
+function Trivia({topic, goToNextPage, intervalTime, questions}) {
   const [actualQuestion, setActualQuestion] = useState('')
   const [actualOptions, setActualOptions] = useState([])
   const [firstTime, setFirstTime] = useState(true)
@@ -10,8 +9,8 @@ function Trivia({topic, goToNextPage, intervalTime}) {
   const [questionOrder, setQuestionOrder] = useState([])
   const [indexOfActualQuestion, setIndexOfActualQuestion] = useState(0)
   const [hasAnsweredCorrect, setHasAnsweredCorrect] = useState(0)
-
-  const thisQuestions = Questions[topic];
+  
+  const thisQuestions = questions[topic];
 
   useEffect(() => {
     sortQuestions()
@@ -76,7 +75,7 @@ function Trivia({topic, goToNextPage, intervalTime}) {
         <div className="options-section">
             <div className="options-container">
                 {actualOptions && actualOptions.map((option, index) => (
-                    <button className={"option-button" + (option===actualCorrect && hasAnsweredCorrect!==0 ? " success-option" : hasAnsweredCorrect===false ? " incorrect-option" : "")} key={index} onClick={() => {checkAnswer(option)}}>{option}</button>
+                    <button className={"option-button" + (option===actualCorrect && hasAnsweredCorrect!==0 ? " correct-option" : hasAnsweredCorrect===false ? " incorrect-option" : "")} key={index} onClick={() => {checkAnswer(option)}} disabled={hasAnsweredCorrect!==0}>{option}</button>
                 ))}
             </div>
         </div>
