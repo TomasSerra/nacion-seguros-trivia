@@ -3,15 +3,27 @@ import './Home.scss'
 import Logo from './../../assets/imgs/trivia/logo.png'
 import { set } from 'firebase/database'
 import UploadData from '../../components/upload data pop up/UploadData'
+import DeleteData from '../../components/delete data pop up/DeleteData'
 
 function Home({goToNextPage}) {
 	const [clicks, setClicks] = useState(0)
-	const [openPopUp, setOpenPopUp] = useState(false)
+	const [openUploadPopUp, setOpenUploadPopUp] = useState(false)
+	const [openDeletePopUp, setOpenDeletePopUp] = useState(false)
 
-	const secretButton = () => {
+	const secretUploadButton = () => {
 		setClicks(prev => prev + 1)
 		if(clicks === 1){
-			setOpenPopUp(true)
+			setOpenUploadPopUp(true)
+		}
+		setTimeout(() => {
+			setClicks(0)
+		}, 1000)
+	}
+
+	const secretDeleteButton = () => {
+		setClicks(prev => prev + 1)
+		if(clicks === 1){
+			setOpenDeletePopUp(true)
 		}
 		setTimeout(() => {
 			setClicks(0)
@@ -20,8 +32,10 @@ function Home({goToNextPage}) {
 
   return (
     <div className='home-page'>
-		<div className='hidden-button' onClick={secretButton}></div>
-		{openPopUp && <UploadData closePopUp={() => {setOpenPopUp(false)}}/>}
+		<div className='hidden-upload-button' onClick={secretUploadButton}></div>
+		<div className='hidden-delete-button' onClick={secretDeleteButton}></div>
+		{openUploadPopUp && <UploadData closePopUp={() => {setOpenUploadPopUp(false)}}/>}
+		{openDeletePopUp && <DeleteData closePopUp={() => {setOpenDeletePopUp(false)}}/>}
         <div className="top-section">
         	<img src={Logo} />
         </div>

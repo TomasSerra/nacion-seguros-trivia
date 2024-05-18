@@ -7,10 +7,20 @@ import End from './pages/end/End';
 import QR from './pages/qr/QR';
 import Questions from './assets/data/questions.json';
 
+import { getDatabase, ref, child, push, update , get} from "firebase/database";
+import app from './FirebaseConfig'
+
 function App() {
   const [page, setPage] = useState(0);
   const [topic, setTopic] = useState("Tema 1");
 
+  useEffect(() => {
+    if(localStorage.getItem('postKey') === null){
+      const db = getDatabase(app);
+      const newPostKey = push(child(ref(db), '/')).key;
+      localStorage.setItem('postKey', newPostKey)
+    }
+  }, [])
   return (
     <>
       {page === 0 && <Home goToNextPage={() => {setPage(1)}}/>}

@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import './UploadData.scss'
 import { getDatabase, ref, child, push, update , get} from "firebase/database";
+import app from '../../FirebaseConfig'
 
 function UploadData({closePopUp}) {
+    const db = getDatabase(app);
+
     const [message, setMessage] = useState()
     const [subiendo, setSubiendo] = useState(false)
 
@@ -14,9 +17,22 @@ function UploadData({closePopUp}) {
                 return;
             }
             setSubiendo(true)
+
+            const postKey = localStorage.getItem('postKey')
+            const updates = {};
+            updates[postKey] = JSON.parse(localStorage.getItem('answers'));
+            update(ref(db), updates).then(() => {
+                setMessage('Datos subidos correctamente')
+                setSubiendo(false)
+            }
+            ).catch(() => {
+                setMessage('Error al subir los datos')
+                setSubiendo(false)
+            });
         }
         catch(e){
             setMessage(e)
+            setSubiendo(true)
         }
     }
 

@@ -10,10 +10,20 @@
     background-size: cover;
     background-position: center;
 
-    .hidden-button{
+    .hidden-upload-button{
         position: absolute;
         top: 0;
         right: 0;
+        width: 15vw;
+        height: 15vw;
+        background-color: transparent;
+        z-index: 100;
+    }
+
+    .hidden-delete-button{
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 15vw;
         height: 15vw;
         background-color: transparent;
