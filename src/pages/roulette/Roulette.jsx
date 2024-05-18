@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './Roulette.module.scss'
 import Hand from '../../assets/imgs/roulette/mano.webp'
 import { Wheel} from 'react-custom-roulette'
+import Logo from './../../assets/imgs/trivia/logo.png'
 
 function Roulette({goToNextPage, questions, setTopic}) {
   
@@ -10,7 +11,7 @@ function Roulette({goToNextPage, questions, setTopic}) {
   const [rotate, setRotate] = useState(false);
   const [data, setData] = useState([]);
 
-  const colors = ['#9A99F2', '#CCDCFF', '#FFDD55', '#72559F'];
+  const colors = ['#ffc801', '#13c989', '#eb36a8', '#9b13c9'];
 
   //Bloquear click derecho
   useEffect(() => {
@@ -38,7 +39,6 @@ function Roulette({goToNextPage, questions, setTopic}) {
       data.push({option: key, style: {backgroundColor: colors[i], textColor: 'black'}});
       i++;
     } )
-    console.log(data);
     setData(data);
   }
 
@@ -62,7 +62,9 @@ function Roulette({goToNextPage, questions, setTopic}) {
 
   return (
       <div className={styles.Roulette} onMouseDown={()=>{if(text) rotateRoulette();}}>
-          <h1 className={styles.title}>Girá la ruleta</h1>
+          <div className={styles['top-section']}>
+            <img src={Logo} />
+          </div>
           {text && <h1 className={styles.text}>TOCA PARA JUGAR</h1>}
           <div className={styles['roulette-container']}>
           {data.length!==0 &&
@@ -74,14 +76,14 @@ function Roulette({goToNextPage, questions, setTopic}) {
               stopSpinning();
             }}
             outerBorderWidth={20}
-            outerBorderColor={'#72559F'}
+            outerBorderColor={'#0062AD'}
             radiusLineWidth={0}
             radiusLineColor='white'
             fontSize={30}
             spinDuration={0.5}
             pointerProps={{style:{width: '23%'}}}
             innerRadius={0}
-            innerBorderColor={'#72559F'}
+            innerBorderColor={'#0062AD'}
             innerBorderWidth={40}
           />
           }

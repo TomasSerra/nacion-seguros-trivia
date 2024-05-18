@@ -7,11 +7,21 @@
     align-items: center;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../../assets/imgs/general/fondo.png');
+    background-position: center;
+    background-size: cover;
 
-    .title{
-        color: white;
+    .top-section{
+        width: 100%;
+        margin: 5dvh 0;
+        display: flex;
+        justify-content: center;
         position: absolute;
-        top: 3dvh;
+        top: 0;
+
+        img{
+            width: 40vw;
+        }
     }
 
     .logo, .text, .button{
@@ -27,14 +37,15 @@
     .text{
         bottom: 10dvh;
         font-size: 10vw;
-        color: white;
+        color: #0062AD;
         padding: 0 8vw;
-        font-weight: lighter;
+        font-family: 'Kievit Bold';
         animation: textAnim 1.5s infinite;
     }
 
     .button{
         background-color: #D82C3E;
+        color: #eb36a8;
         bottom: 10%;
         a{
             transform: skewX(0deg);
@@ -64,14 +75,6 @@
             bottom: -45%;
             right: -35%;
             animation: handAnim 1.5s infinite;
-        }
-    }
-}
-
-@media (max-width: 440px) {
-    .Roulette{
-        .text{
-
         }
     }
 }
