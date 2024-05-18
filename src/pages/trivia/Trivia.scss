@@ -1,0 +1,96 @@
+.trivia-page{
+    height: 100dvh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/imgs/general/fondo.png');
+    background-size: cover;
+    background-position: center;
+
+    .top-section{
+        margin: 5dvh 0;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 40vw;
+        }
+    }
+
+    .question-section{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        .question-container{
+            font-size: 4vw;
+            color: white;
+            width: 80vw;
+            background-color: #0062AD;
+            height: fit-content;
+            min-height: 50vw;
+            border-radius: 2dvh;
+            padding: 2dvh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2{
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .options-section{
+        width: 100%;
+        height: 60dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .options-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .option-button{
+                font-size: 5vw;
+                border: none;
+                background-color: #ffffff;
+                width: 80vw;
+                height: fit-content;
+                padding: 1.3dvh 0;
+                margin: 1.5dvh 0;
+                color: black;
+                border-radius: 1dvh;
+                box-shadow: #dfdfdf 0 1vw 0;
+                font-family: 'Kievit Bold';
+            }
+            
+            .option-button.correct-option{
+                background-color: green;
+                box-shadow: rgb(0, 104, 0) 0 1vw 0;
+                color: white;
+
+                &:disabled{
+                    opacity: 1;
+                }
+            }
+
+            .option-button.incorrect-option{
+                background-color: rgb(255, 72, 72);
+                box-shadow: rgb(182, 81, 81) 0 1vw 0;
+                color: #ffffff;
+
+                &:disabled{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
