@@ -1,0 +1,69 @@
+.home-page{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../../assets/imgs/home/fondo.png');
+    background-size: cover;
+    background-position: center;
+
+    .hidden-button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15vw;
+        height: 15vw;
+        background-color: transparent;
+        z-index: 100;
+    }
+
+    .top-section{
+        margin: 5dvh 0;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 40vw;
+        }
+    }
+
+    .title-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90vw;
+
+        h1{
+            font-size: 10vw;
+            color: #526635;
+            margin: 3dvh 0;
+        }
+
+        h2{
+            margin: 0;
+            font-size: 6vw;
+            color: #0062AD;
+        }
+    }
+
+    .button-section{
+        position: absolute;
+        bottom: 10dvh;
+
+        button{
+            width: 60vw;
+            height: 10vh;
+            background-color: #0062AD;
+            color: white;
+            font-size: 7vw;
+            border: none;
+            border-radius: 2dvh;
+            cursor: pointer;
+            font-family: 'Kievit Bold';
+        }
+    }
+}

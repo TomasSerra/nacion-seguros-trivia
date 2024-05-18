@@ -8,7 +8,7 @@ import QR from './pages/qr/QR';
 import Questions from './assets/data/questions.json';
 
 function App() {
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(0);
   const [topic, setTopic] = useState("Tema 1");
 
   return (
