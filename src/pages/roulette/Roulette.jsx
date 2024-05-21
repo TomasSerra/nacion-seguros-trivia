@@ -3,6 +3,7 @@ import styles from './Roulette.module.scss'
 import Hand from '../../assets/imgs/roulette/mano.webp'
 import { Wheel} from 'react-custom-roulette'
 import Logo from './../../assets/imgs/trivia/logo.png'
+import Icon from '../../assets/imgs/roulette/roulette-icon.png'
 
 function Roulette({goToNextPage, questions, setTopic}) {
   
@@ -11,32 +12,18 @@ function Roulette({goToNextPage, questions, setTopic}) {
   const [rotate, setRotate] = useState(false);
   const [data, setData] = useState([]);
 
-  const colors = ['#ffc801', '#13c989', '#eb36a8', '#9b13c9'];
+  const colors = ["#FEA700", "#C35AF4", "#F04B1D", "#B3E544"];
 
   //Bloquear click derecho
   useEffect(() => {
     getData()
-    const bloquearClickDerecho = (event) => {
-        event.preventDefault();
-    };
-    const preventZoom = (e) => {
-      e.preventDefault();
-    };
-
-    document.addEventListener('gesturestart', preventZoom);
-    document.addEventListener('contextmenu', bloquearClickDerecho);
-
-    return () => {
-      document.removeEventListener('contextmenu', bloquearClickDerecho);
-      document.removeEventListener('gesturestart', preventZoom);
-    };
   }, []);
 
   function getData(){
     let i = 0;
     let data = [];
     Object.keys(questions).map((key) => {
-      data.push({option: key, style: {backgroundColor: colors[i], textColor: 'black'}});
+      data.push({option: key, style: {backgroundColor: colors[i], textColor: 'white'}});
       i++;
     } )
     setData(data);
@@ -68,6 +55,8 @@ function Roulette({goToNextPage, questions, setTopic}) {
           {text && <h1 className={styles.text}>TOCA PARA JUGAR</h1>}
           <div className={styles['roulette-container']}>
           {data.length!==0 &&
+          <>
+          <img className={styles.icon} src={Icon}/>
           <Wheel
             mustStartSpinning={rotate}
             prizeNumber={prizeNumber}
@@ -81,11 +70,13 @@ function Roulette({goToNextPage, questions, setTopic}) {
             radiusLineColor='white'
             fontSize={30}
             spinDuration={0.5}
-            pointerProps={{style:{width: '23%'}}}
+            pointerProps={{style:{width: '20%', top: '1dvh', right: '1dvh'}}}
             innerRadius={0}
             innerBorderColor={'#0062AD'}
             innerBorderWidth={40}
+            textDistance={55}
           />
+          </>
           }
           {text && <img className={styles.hand} src={Hand}/>}
           </div>
