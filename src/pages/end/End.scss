@@ -1,0 +1,74 @@
+.end-page{ 
+    height: 100dvh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/imgs/general/fondo.png');
+    background-size: cover;
+    background-position: center;
+
+    .top-section{
+        margin: 5dvh 0;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 40vw;
+        }
+    }
+
+    .title-section{
+        h1{
+            font-size: 10vw;
+            color: #526635;
+            text-align: center;
+            margin: 0;
+            line-height: 1;
+        }
+
+        h2{
+            font-size: 6vw;
+            color: #0062AD;
+            text-align: center;
+            margin: 2dvh 0;
+        }
+    }
+
+    .prize-section{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 10dvh;
+
+        .trophy{
+            width: 55vw;
+            z-index: 2;
+        }
+
+        .trophy-bg{
+            width: 70vw;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            animation: spin 10s infinite linear;
+        }
+
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

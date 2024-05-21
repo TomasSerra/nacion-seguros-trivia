@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import './Home.scss'
 import Logo from './../../assets/imgs/trivia/logo.png'
-import { set } from 'firebase/database'
 import UploadData from '../../components/upload data pop up/UploadData'
 import DeleteData from '../../components/delete data pop up/DeleteData'
 

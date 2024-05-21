@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import './Trivia.scss'
 import Logo from './../../assets/imgs/trivia/logo.png'
 
-function Trivia({topic, goToNextPage, intervalTime, questions}) {
+function Trivia({topic, goToNextPage, intervalTime, questions, setQuestions}) {
   const [actualQuestion, setActualQuestion] = useState('')
   const [actualOptions, setActualOptions] = useState([])
   const [firstTime, setFirstTime] = useState(true)
@@ -52,10 +52,12 @@ function Trivia({topic, goToNextPage, intervalTime, questions}) {
     if(answer === actualCorrect){
       setHasAnsweredCorrect(true)
       setAnswers(prev => ({...prev, [actualQuestion]: 1})) //Puede ser borrado si no se quiere guardar las respuestas
+      setQuestions(prev => ({...prev, correct: prev.correct + 1, total: prev.total + 1}))
     }
     else{
       setHasAnsweredCorrect(false)
       setAnswers(prev => ({...prev, [actualQuestion]: 0})) //Puede ser borrado si no se quiere guardar las respuestas
+      setQuestions(prev => ({...prev, total: prev.total + 1}))
     }
     setTimeout(() => {
       if(indexOfActualQuestion < thisQuestions.length){

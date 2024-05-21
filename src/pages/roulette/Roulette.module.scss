@@ -62,6 +62,17 @@
         position: relative;
         margin-bottom: 10%;
         width: 100vw;
+        .icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10vw;
+            height: 10vw;
+            z-index: 20;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
         div:nth-of-type(1){
             width: 90vw !important;
             height: 90vw !important;
@@ -71,9 +82,9 @@
         .hand{
             z-index: 5;
             position: absolute;
-            width: 85%;
-            bottom: -45%;
-            right: -35%;
+            width: 60vw;
+            bottom: -15dvh;
+            right: -10vw;
             animation: handAnim 1.5s infinite;
         }
     }
