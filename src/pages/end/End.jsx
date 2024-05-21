@@ -7,24 +7,9 @@ import FondoTrofeo from './../../assets/imgs/end/fondo-trofeo.png'
 function End({correctQuestions, totalQuestions, goToNextPage}) {
 
   useEffect(() => {
-    const bloquearClickDerecho = (event) => {
-        event.preventDefault();
-    };
-    const preventZoom = (e) => {
-      e.preventDefault();
-    };
-
-    document.addEventListener('gesturestart', preventZoom);
-    document.addEventListener('contextmenu', bloquearClickDerecho);
-
     setTimeout(() => {
-      //goToNextPage()
-    }, 4000)
-
-    return () => {
-      document.removeEventListener('contextmenu', bloquearClickDerecho);
-      document.removeEventListener('gesturestart', preventZoom);
-    };
+      goToNextPage()
+    }, 5000)
   }, []);
 
   return (

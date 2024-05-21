@@ -11,7 +11,7 @@ import { getDatabase, ref, child, push, update , get} from "firebase/database";
 import app from './FirebaseConfig'
 
 function App() {
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(0);
   const [topic, setTopic] = useState("Tema 1");
   const [questions, setQuestions] = useState({
     total: 0,
@@ -19,12 +19,19 @@ function App() {
   });
 
   useEffect(() => {
+    bloquearGestos()
     if(localStorage.getItem('postKey') === null){
       const db = getDatabase(app);
       const newPostKey = push(child(ref(db), '/')).key;
       localStorage.setItem('postKey', newPostKey)
     }
+
   }, [])
+  
+  function bloquearGestos(){
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('selectstart', event => event.preventDefault());
+  }
   return (
     <>
       {page === 0 && <Home goToNextPage={() => {setPage(1)}}/>}

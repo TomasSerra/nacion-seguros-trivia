@@ -17,20 +17,6 @@ function Roulette({goToNextPage, questions, setTopic}) {
   //Bloquear click derecho
   useEffect(() => {
     getData()
-    const bloquearClickDerecho = (event) => {
-        event.preventDefault();
-    };
-    const preventZoom = (e) => {
-      e.preventDefault();
-    };
-
-    document.addEventListener('gesturestart', preventZoom);
-    document.addEventListener('contextmenu', bloquearClickDerecho);
-
-    return () => {
-      document.removeEventListener('contextmenu', bloquearClickDerecho);
-      document.removeEventListener('gesturestart', preventZoom);
-    };
   }, []);
 
   function getData(){
