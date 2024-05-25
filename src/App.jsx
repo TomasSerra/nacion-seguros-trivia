@@ -13,7 +13,7 @@ import app from './FirebaseConfig'
 
 function App() {
   const [page, setPage] = useState(0);
-  const [topic, setTopic] = useState("Máquinas agrícolas");
+  const [topic, setTopic] = useState("Máquinas");
   const [questions, setQuestions] = useState({
     total: 0,
     correct: 0

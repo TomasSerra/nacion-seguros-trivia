@@ -22,7 +22,6 @@ function Roulette({goToNextPage, questions, setTopic, logo}) {
     let i = 0;
     let data = [];
     Object.keys(questions).map((key) => {
-      console.log(key);
       data.push({option: key, style: {backgroundColor: colors[i], textColor: 'white'}});
       i++;
     } )
