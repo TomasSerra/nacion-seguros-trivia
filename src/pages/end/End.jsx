@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react'
 import './End.scss'
-import Logo from './../../assets/imgs/trivia/logo.png'
 import Trophy from './../../assets/imgs/end/trophy.webp'
 import FondoTrofeo from './../../assets/imgs/end/fondo-trofeo.png'
 
-function End({correctQuestions, totalQuestions, goToNextPage}) {
+function End({correctQuestions, totalQuestions, goToNextPage, logo}) {
 
   useEffect(() => {
     setTimeout(() => {
@@ -16,7 +15,7 @@ function End({correctQuestions, totalQuestions, goToNextPage}) {
     <div className='end-page'>
 
       <div className="top-section">
-        <img src={Logo} />
+        <img src={logo} />
       </div>
 
       <div className="title-section">

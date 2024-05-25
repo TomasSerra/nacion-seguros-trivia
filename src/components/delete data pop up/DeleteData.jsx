@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './DeleteData.scss'
+import { set } from 'firebase/database'
 
 function DeleteData({closePopUp}) {
     const [message, setMessage] = useState()
@@ -7,8 +8,13 @@ function DeleteData({closePopUp}) {
 
     const deleteData = () => {
         if(password === 'borrar'){
-            localStorage.removeItem('answers')
-            setMessage('Datos eliminados correctamente')
+            if(localStorage.getItem('answers') !== null){
+                localStorage.removeItem('answers')
+                setMessage('Datos eliminados correctamente')
+            }
+            else{
+                setMessage('No hay datos para borrar')
+            }
         }
         else{
             setMessage('Contraseña incorrecta')

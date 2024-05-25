@@ -6,13 +6,14 @@ import Trivia from './pages/trivia/Trivia';
 import End from './pages/end/End';
 import QR from './pages/qr/QR';
 import Questions from './assets/data/questions.json';
+import Logo from './assets/imgs/general/logo.png';
 
 import { getDatabase, ref, child, push, update , get} from "firebase/database";
 import app from './FirebaseConfig'
 
 function App() {
   const [page, setPage] = useState(0);
-  const [topic, setTopic] = useState("Tema 1");
+  const [topic, setTopic] = useState("Máquinas");
   const [questions, setQuestions] = useState({
     total: 0,
     correct: 0
@@ -27,6 +28,14 @@ function App() {
     }
 
   }, [])
+
+  useEffect(() => {
+    if(page === 0){
+      setQuestions({total: 0,
+        correct: 0
+      });
+    }
+  }, [page])
   
   function bloquearGestos(){
     document.addEventListener('contextmenu', event => event.preventDefault());
@@ -34,11 +43,11 @@ function App() {
   }
   return (
     <>
-      {page === 0 && <Home goToNextPage={() => {setPage(1)}}/>}
-      {page === 1 && <Roulette goToNextPage={() => {setPage(2)}} questions={Questions} setTopic={setTopic}/>}
-      {page === 2 && <Trivia topic={topic} intervalTime={3} goToNextPage={() => {setPage(3)}} questions={Questions} setQuestions={setQuestions}/>}
-      {page === 3 && <End goToNextPage={() => {setPage(4)}} totalQuestions={questions.total} correctQuestions={questions.correct}/>}
-      {page === 4 && <QR goToNextPage={() => {setPage(0)}}/>}
+      {page === 0 && <Home goToNextPage={() => {setPage(1)}} logo={Logo}/>}
+      {page === 1 && <Roulette goToNextPage={() => {setPage(2)}} questions={Questions} setTopic={setTopic} logo={Logo}/>}
+      {page === 2 && <Trivia topic={topic} intervalTime={3} goToNextPage={() => {setPage(3)}} questions={Questions} setQuestionInfo={setQuestions} questionTime={15} numberOfQuestions={4} logo={Logo}/>}
+      {page === 3 && <End goToNextPage={() => {setPage(4)}} totalQuestions={questions.total} correctQuestions={questions.correct} logo={Logo}/>}
+      {page === 4 && <QR goToNextPage={() => {setPage(0)}} logo={Logo}/>}
     </>
   );
 }

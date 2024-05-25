@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import styles from './Roulette.module.scss'
 import Hand from '../../assets/imgs/roulette/mano.webp'
 import { Wheel} from 'react-custom-roulette'
-import Logo from './../../assets/imgs/trivia/logo.png'
 import Icon from '../../assets/imgs/roulette/roulette-icon.png'
 
-function Roulette({goToNextPage, questions, setTopic}) {
+function Roulette({goToNextPage, questions, setTopic, logo}) {
   
   const [prizeNumber, setPrizeNumber] = useState(0);
   const [text, setText] = useState(true);
@@ -50,7 +49,7 @@ function Roulette({goToNextPage, questions, setTopic}) {
   return (
       <div className={styles.Roulette} onMouseDown={()=>{if(text) rotateRoulette();}}>
           <div className={styles['top-section']}>
-            <img src={Logo} />
+            <img src={logo} />
           </div>
           {text && <h1 className={styles.text}>TOCA PARA JUGAR</h1>}
           <div className={styles['roulette-container']}>
