@@ -10,6 +10,7 @@ function DeleteData({closePopUp}) {
         if(password === 'borrar'){
             if(localStorage.getItem('answers') !== null){
                 localStorage.removeItem('answers')
+                localStorage.removeItem('postKey')
                 setMessage('Datos eliminados correctamente')
             }
             else{

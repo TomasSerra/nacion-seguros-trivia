@@ -1,5 +1,5 @@
 {
-  "Máquinas": [
+  "Maquinaria": [
     {
       "question": "¿Cuándo una maquinaria agrícola tiene cobertura?",
       "options": [
@@ -69,7 +69,7 @@
       ]
     }
   ],
-  "Seguro": [
+  "Cultivo": [
     {
       "question": "¿Cuál de estos cultivos aseguramos?",
       "options": [

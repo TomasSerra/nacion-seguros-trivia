@@ -8,6 +8,9 @@ body {
   font-family: 'Kievit Bold';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+  -webkit-user-drag: none;
+  overflow: hidden;
 }
 
 code {
