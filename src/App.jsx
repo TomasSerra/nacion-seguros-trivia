@@ -8,7 +8,7 @@ import QR from './pages/qr/QR';
 import Questions from './assets/data/questions.json';
 import Logo from './assets/imgs/general/logo.png';
 
-import { getDatabase, ref, child, push, update , get} from "firebase/database";
+import { getDatabase, ref, child, push} from "firebase/database";
 import app from './FirebaseConfig'
 
 function App() {

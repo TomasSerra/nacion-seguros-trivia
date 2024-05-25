@@ -25,10 +25,25 @@
         width: 100%;
         height: fit-content;
 
-        .time-bar-container{
+        .time-container{
             width: 80vw;
             height: 4vw;
-            margin-bottom: 1vw;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2vw;
+            align-items: center;
+
+
+            p{
+                color: black;
+                font-size: 5vw;
+                margin: 0;
+            }
+
+            .time-bar-container{
+                width: 60vw;
+                height: 4vw;
+            }
         }
 
         .question-container{

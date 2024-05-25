@@ -141,9 +141,13 @@ function Trivia({topic, goToNextPage, intervalTime, questions, setQuestionInfo, 
           <img src={logo} />
         </div>
         <div className="question-section">
+          <div className="time-container">
+            <p>Tiempo: </p>
             <div className='time-bar-container'>
-              <TimeBar maxTime={questionTime} actualTime={time} colors={{barColor: '#0062AD', backgroundColor: '#003d6b'}}/>
+              <TimeBar maxTime={questionTime} actualTime={time} colors={{barColor: '#25a244', backgroundColor: '#155d27'}}/>
             </div>
+          </div>
+            
             <div className="question-container">
                 <h2>{actualQuestion}</h2>
             </div>
