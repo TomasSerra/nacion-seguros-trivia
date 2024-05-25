@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
 import './Home.scss'
-import Logo from './../../assets/imgs/trivia/logo.png'
 import UploadData from '../../components/upload data pop up/UploadData'
 import DeleteData from '../../components/delete data pop up/DeleteData'
 
-function Home({goToNextPage}) {
+function Home({goToNextPage, logo}) {
 	const [clicks, setClicks] = useState(0)
 	const [openUploadPopUp, setOpenUploadPopUp] = useState(false)
 	const [openDeletePopUp, setOpenDeletePopUp] = useState(false)
@@ -36,7 +35,7 @@ function Home({goToNextPage}) {
 		{openUploadPopUp && <UploadData closePopUp={() => {setOpenUploadPopUp(false)}}/>}
 		{openDeletePopUp && <DeleteData closePopUp={() => {setOpenDeletePopUp(false)}}/>}
         <div className="top-section">
-        	<img src={Logo} />
+        	<img src={logo} />
         </div>
         <div className="title-section">
 			<h1>¡Bienvenido!</h1>

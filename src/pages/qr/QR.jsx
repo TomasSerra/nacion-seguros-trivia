@@ -1,14 +1,13 @@
 import React from 'react'
 import './QR.scss'
 import QRimage from '../../assets/imgs/qr/qr.png'
-import Logo from '../../assets/imgs/trivia/logo.png'
 
-function QR({goToNextPage}) {
+function QR({goToNextPage, logo}) {
   return (
     <div className='qr-page'>
 
     <div className="top-section">
-      <img src={Logo} />
+      <img src={logo} />
     </div>
 
     <div className="title-section">

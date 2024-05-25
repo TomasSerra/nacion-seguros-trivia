@@ -20,9 +20,17 @@
 
     .question-section{
         display: flex;
-        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
         height: fit-content;
+
+        .time-bar-container{
+            width: 80vw;
+            height: 4vw;
+            margin-bottom: 1vw;
+        }
+
         .question-container{
             font-size: 4vw;
             color: white;
@@ -64,11 +72,11 @@
                 background-color: #ffffff;
                 width: 80vw;
                 height: fit-content;
-                padding: 1.3dvh 0;
+                padding: 1.3dvh 1vw;
                 margin: 1.5dvh 0;
                 color: black;
                 border-radius: 1dvh;
-                box-shadow: #dfdfdf 0 1vw 0;
+                box-shadow: #9c9c9c 0 1.2vw 0;
                 font-family: 'Kievit Bold';
             }
             

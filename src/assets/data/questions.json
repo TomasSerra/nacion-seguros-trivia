@@ -1,75 +1,452 @@
 {
-    "Tema 1": [
-      {
-        "question": "¿Cuál es la capital de Francia?",
-        "options": ["Buenos Aires", "Madrid", "Roma", "París"]
-      },
-      {
-        "question": "¿Qué idioma se habla en Brasil?",
-        "options": ["Español", "Portugués", "Inglés", "Francés"]
-      },
-      {
-        "question": "¿En qué continente está ubicado Egipto?",
-        "options": ["Europa", "Asia", "África", "Oceanía"]
-      },
-      {
-        "question": "¿Cuál es el océano más grande del mundo?",
-        "options": ["Pacífico", "Atlántico", "Índico", "Ártico"]
-      }
-    ],
-    "Tema 2": [
-      {
-        "question": "¿Cuál es el río más largo del mundo?",
-        "options": ["Amazonas", "Nilo", "Misisipi", "Yangtsé"]
-      },
-      {
-        "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-        "options": ["Miguel de Cervantes", "William Shakespeare", "Federico García Lorca", "Gabriel García Márquez"]
-      },
-      {
-        "question": "¿Cuál es la montaña más alta del mundo?",
-        "options": ["Everest", "K2", "Kangchenjunga", "Makalu"]
-      },
-      {
-        "question": "¿Cuál es el metal más abundante en la corteza terrestre?",
-        "options": ["Hierro", "Aluminio", "Cobre", "Oro"]
-      }
-    ],
-    "Tema 3": [
-      {
-        "question": "¿Cuál es el país más grande del mundo?",
-        "options": ["Rusia", "China", "Estados Unidos", "Canadá"]
-      },
-      {
-        "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
-        "options": ["1939", "1945", "1914", "1941"]
-      },
-      {
-        "question": "¿Quién pintó 'La última cena'?",
-        "options": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Michelangelo"]
-      },
-      {
-        "question": "¿Cuál es la capital de Australia?",
-        "options": ["Sídney", "Melbourne", "Canberra", "Brisbane"]
-      }
-    ],
-    "Tema 4": [
-      {
-        "question": "¿Cuál es el desierto más grande del mundo?",
-        "options": ["Sahara", "Gobi", "Kalahari", "Antártico"]
-      },
-      {
-        "question": "¿Cuál es el país con más población del mundo?",
-        "options": ["China", "India", "Estados Unidos", "Indonesia"]
-      },
-      {
-        "question": "¿Quién fue el primer presidente de Estados Unidos?",
-        "options": ["George Washington", "Thomas Jefferson", "John Adams", "Abraham Lincoln"]
-      },
-      {
-        "question": "¿Cuál es la moneda de Japón?",
-        "options": ["Yen", "Dólar", "Euro", "Libra esterlina"]
-      }
-    ]
-  }
+  "Máquinas": [
+    {
+      "question": "¿Cuándo una maquinaria agrícola tiene cobertura?",
+      "options": [
+        "Cuando realiza su función específica en tierra firme.",
+        "Cuando circula por sus propios medios, en el eventual transito",
+        "En depósito",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Están cubiertos los daños a terceros por deriva?",
+      "options": [
+        "Falso",
+        "Verdadero"
+      ]
+    },
+    {
+      "question": "Cual es el límite de indemnización por evento y vigencia por el adicional de RC?",
+      "options": [
+        "Suma Asegurada del Adicional indicado en póliza",
+        "Suma Asegurada del Adicional indicado en póliza + 1 reposición",
+        "Suma Asegurada del Adicional indicado en póliza + 2 reposiciones"
+      ]
+    },
+    {
+      "question": "Adicional - Daños al Campo, para la cobertura Premium. Se ampara el daño al campo",
+      "options": [
+        "Propio",
+        "De terceros",
+        "Todas son correctas"
+      ]
+    },
+    {
+      "question": "El traslado de la maquinaria en vehículos de terceros está cubierto?",
+      "options": [
+        "Si",
+        "No"
+      ]
+    },
+    {
+      "question": "Se ampara maquinaria en alquiler o alquiladas?",
+      "options": [
+        "Si",
+        "No"
+      ]
+    },
+    {
+      "question": "Sumas Aseguradas. Cobertura Todo Riesgo",
+      "options": [
+        "Valor de mercado depreciado de acuerdo con su antigüedad, uso y estado.",
+        "Valor de reposición del equipo (0Km)"
+      ]
+    },
+    {
+      "question": "Sumas Aseguradas. Marcar a que cobertura corresponde – Daños Totales",
+      "options": [
+        "Valor de reposición del equipo (0Km)",
+        "Valor de mercado depreciado de acuerdo con su antigüedad, uso y estado."
+      ]
+    },
+    {
+      "question": "¿Cuándo hay un siniestro de daños materiales?",
+      "options": [
+        "Cuando hay fallas o daños mecánicos y/o eléctricos, o desperfectos internos.",
+        "Todas son correctas",
+        "Cuando hay un daño material súbito e imprevisto"
+      ]
+    }
+  ],
+  "Seguro": [
+    {
+      "question": "¿Cuál de estos cultivos aseguramos?",
+      "options": [
+        "Arroz",
+        "Algodón",
+        "Cebada",
+        "Legumbres",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Cuál de estos eventos no tiene cobertura de daños?",
+      "options": [
+        "Heladas agronómicas",
+        "Vientos fuertes",
+        "Incendio de rastrojo",
+        "Ninguno de los detallados"
+      ]
+    },
+    {
+      "question": "Después de un siniestro de granizo, ¿puedo cosechar el cultivo asegurado y afectado?",
+      "options": [
+        "No",
+        "Si, sin dejar muestras",
+        "Si, dejando muestras representativas"
+      ]
+    },
+    {
+      "question": "Los cultivos forrajeros no tienen seguros de granizo.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ]
+    },
+    {
+      "question": "Nacion Seguros ofrece sus seguros agrícolas en:",
+      "options": [
+        "Buenos Aires, Santa Fe y La Pampa",
+        "Buenos Aires, Santa Fe y Córdoba",
+        "En todo el país"
+      ]
+    },
+    {
+      "question": "Además de cobertura de Granizo también se puede asegurar:",
+      "options": [
+        "Falta de Piso",
+        "Vientos Fuertes",
+        "Heladas Agronómicas",
+        "Incendio de rastrojo",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "En siniestros de viento, normalmente los daños se evalúan",
+      "options": [
+        "Antes de la cosecha",
+        "Mientras se está cosechando",
+        "A los 15 días de ocurrido el evento.",
+        "Después de la cosecha"
+      ]
+    },
+    {
+      "question": "Los seguros de Granizo los puedo tomar en:",
+      "options": [
+        "Pesos",
+        "Dólares",
+        "Quintales",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "Como puedo cotizar un seguro de granizo:",
+      "options": [
+        "En cualquier sucursal del Banco de la Nacion Argentina",
+        "Por medio de su Productor Asesor de Seguros",
+        "Directamente en las Sucursales de Nacion Seguros",
+        "Todas anteriores"
+      ]
+    }
+  ],
+  "???": [
+    {
+      "question": "¿Cuándo una maquinaria agrícola tiene cobertura?",
+      "options": [
+        "Cuando realiza su función específica en tierra firme.",
+        "Cuando circula por sus propios medios, en el eventual transito",
+        "En depósito",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Están cubiertos los daños a terceros por deriva?",
+      "options": [
+        "Falso",
+        "Verdadero"
+      ]
+    },
+    {
+      "question": "Cual es el límite de indemnización por evento y vigencia por el adicional de RC?",
+      "options": [
+        "Suma Asegurada del Adicional indicado en póliza",
+        "Suma Asegurada del Adicional indicado en póliza + 1 reposición",
+        "Suma Asegurada del Adicional indicado en póliza + 2 reposiciones"
+      ]
+    },
+    {
+      "question": "Adicional - Daños al Campo, para la cobertura Premium. Se ampara el daño al campo",
+      "options": [
+        "Propio",
+        "De terceros",
+        "Todas son correctas"
+      ]
+    },
+    {
+      "question": "El traslado de la maquinaria en vehículos de terceros está cubierto?",
+      "options": [
+        "Si",
+        "No"
+      ]
+    },
+    {
+      "question": "Se ampara maquinaria en alquiler o alquiladas?",
+      "options": [
+        "Si",
+        "No"
+      ]
+    },
+    {
+      "question": "Sumas Aseguradas. Cobertura Todo Riesgo",
+      "options": [
+        "Valor de mercado depreciado de acuerdo con su antigüedad, uso y estado.",
+        "Valor de reposición del equipo (0Km)"
+      ]
+    },
+    {
+      "question": "Sumas Aseguradas. Marcar a que cobertura corresponde – Daños Totales",
+      "options": [
+        "Valor de reposición del equipo (0Km)",
+        "Valor de mercado depreciado de acuerdo con su antigüedad, uso y estado."
+      ]
+    },
+    {
+      "question": "¿Cuándo hay un siniestro de daños materiales?",
+      "options": [
+        "Cuando hay fallas o daños mecánicos y/o eléctricos, o desperfectos internos.",
+        "Todas son correctas",
+        "Cuando hay un daño material súbito e imprevisto"
+      ]
+    },
+    {
+      "question": "¿Cuál de estos cultivos aseguramos?",
+      "options": [
+        "Arroz",
+        "Algodón",
+        "Cebada",
+        "Legumbres",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Cuál de estos eventos no tiene cobertura de daños?",
+      "options": [
+        "Heladas agronómicas",
+        "Vientos fuertes",
+        "Incendio de rastrojo",
+        "Ninguno de los detallados"
+      ]
+    },
+    {
+      "question": "Después de un siniestro de granizo, ¿puedo cosechar el cultivo asegurado y afectado?",
+      "options": [
+        "No",
+        "Si, sin dejar muestras",
+        "Si, dejando muestras representativas"
+      ]
+    },
+    {
+      "question": "Los cultivos forrajeros no tienen seguros de granizo.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ]
+    },
+    {
+      "question": "Nacion Seguros ofrece sus seguros agrícolas en:",
+      "options": [
+        "Buenos Aires, Santa Fe y La Pampa",
+        "Buenos Aires, Santa Fe y Córdoba",
+        "En todo el país"
+      ]
+    },
+    {
+      "question": "Además de cobertura de Granizo también se puede asegurar:",
+      "options": [
+        "Falta de Piso",
+        "Vientos Fuertes",
+        "Heladas Agronómicas",
+        "Incendio de rastrojo",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "En siniestros de viento, normalmente los daños se evalúan",
+      "options": [
+        "Antes de la cosecha",
+        "Mientras se está cosechando",
+        "A los 15 días de ocurrido el evento.",
+        "Después de la cosecha"
+      ]
+    },
+    {
+      "question": "Los seguros de Granizo los puedo tomar en:",
+      "options": [
+        "Pesos",
+        "Dólares",
+        "Quintales",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "Como puedo cotizar un seguro de granizo:",
+      "options": [
+        "En cualquier sucursal del Banco de la Nacion Argentina",
+        "Por medio de su Productor Asesor de Seguros",
+        "Directamente en las Sucursales de Nacion Seguros",
+        "Todas anteriores"
+      ]
+    }
+  ],
+  "??": [
+    {
+      "question": "¿Cuándo una maquinaria agrícola tiene cobertura?",
+      "options": [
+        "Cuando realiza su función específica en tierra firme.",
+        "Cuando circula por sus propios medios, en el eventual transito",
+        "En depósito",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Están cubiertos los daños a terceros por deriva?",
+      "options": [
+        "Falso",
+        "Verdadero"
+      ]
+    },
+    {
+      "question": "Cual es el límite de indemnización por evento y vigencia por el adicional de RC?",
+      "options": [
+        "Suma Asegurada del Adicional indicado en póliza",
+        "Suma Asegurada del Adicional indicado en póliza + 1 reposición",
+        "Suma Asegurada del Adicional indicado en póliza + 2 reposiciones"
+      ]
+    },
+    {
+      "question": "Adicional - Daños al Campo, para la cobertura Premium. Se ampara el daño al campo",
+      "options": [
+        "Propio",
+        "De terceros",
+        "Todas son correctas"
+      ]
+    },
+    {
+      "question": "El traslado de la maquinaria en vehículos de terceros está cubierto?",
+      "options": [
+        "Si",
+        "No"
+      ]
+    },
+    {
+      "question": "Se ampara maquinaria en alquiler o alquiladas?",
+      "options": [
+        "Si",
+        "No"
+      ]
+    },
+    {
+      "question": "Sumas Aseguradas. Cobertura Todo Riesgo",
+      "options": [
+        "Valor de mercado depreciado de acuerdo con su antigüedad, uso y estado.",
+        "Valor de reposición del equipo (0Km)"
+      ]
+    },
+    {
+      "question": "Sumas Aseguradas. Marcar a que cobertura corresponde – Daños Totales",
+      "options": [
+        "Valor de reposición del equipo (0Km)",
+        "Valor de mercado depreciado de acuerdo con su antigüedad, uso y estado."
+      ]
+    },
+    {
+      "question": "¿Cuándo hay un siniestro de daños materiales?",
+      "options": [
+        "Cuando hay fallas o daños mecánicos y/o eléctricos, o desperfectos internos.",
+        "Todas son correctas",
+        "Cuando hay un daño material súbito e imprevisto"
+      ]
+    },
+    {
+      "question": "¿Cuál de estos cultivos aseguramos?",
+      "options": [
+        "Arroz",
+        "Algodón",
+        "Cebada",
+        "Legumbres",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "¿Cuál de estos eventos no tiene cobertura de daños?",
+      "options": [
+        "Heladas agronómicas",
+        "Vientos fuertes",
+        "Incendio de rastrojo",
+        "Ninguno de los detallados"
+      ]
+    },
+    {
+      "question": "Después de un siniestro de granizo, ¿puedo cosechar el cultivo asegurado y afectado?",
+      "options": [
+        "No",
+        "Si, sin dejar muestras",
+        "Si, dejando muestras representativas"
+      ]
+    },
+    {
+      "question": "Los cultivos forrajeros no tienen seguros de granizo.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ]
+    },
+    {
+      "question": "Nacion Seguros ofrece sus seguros agrícolas en:",
+      "options": [
+        "Buenos Aires, Santa Fe y La Pampa",
+        "Buenos Aires, Santa Fe y Córdoba",
+        "En todo el país"
+      ]
+    },
+    {
+      "question": "Además de cobertura de Granizo también se puede asegurar:",
+      "options": [
+        "Falta de Piso",
+        "Vientos Fuertes",
+        "Heladas Agronómicas",
+        "Incendio de rastrojo",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "En siniestros de viento, normalmente los daños se evalúan",
+      "options": [
+        "Antes de la cosecha",
+        "Mientras se está cosechando",
+        "A los 15 días de ocurrido el evento.",
+        "Después de la cosecha"
+      ]
+    },
+    {
+      "question": "Los seguros de Granizo los puedo tomar en:",
+      "options": [
+        "Pesos",
+        "Dólares",
+        "Quintales",
+        "Todas las anteriores"
+      ]
+    },
+    {
+      "question": "Como puedo cotizar un seguro de granizo:",
+      "options": [
+        "En cualquier sucursal del Banco de la Nacion Argentina",
+        "Por medio de su Productor Asesor de Seguros",
+        "Directamente en las Sucursales de Nacion Seguros",
+        "Todas anteriores"
+      ]
+    }
+  ]
+}
   
