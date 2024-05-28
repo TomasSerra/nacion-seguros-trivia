@@ -2,8 +2,12 @@ import React, {useEffect} from 'react'
 import './End.scss'
 import Trophy from './../../assets/imgs/end/trophy.webp'
 import FondoTrofeo from './../../assets/imgs/end/fondo-trofeo.png'
+import Confetti from 'react-confetti'
+import {useWindowSize} from '@react-hook/window-size'
 
 function End({correctQuestions, totalQuestions, goToNextPage, logo}) {
+  const [width, height] = useWindowSize()
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -13,6 +17,10 @@ function End({correctQuestions, totalQuestions, goToNextPage, logo}) {
 
   return (
     <div className='end-page'>
+      <Confetti
+        width={width}
+        height={height}
+    	/>
 
       <div className="top-section">
         <img src={logo} />
