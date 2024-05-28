@@ -3,6 +3,8 @@ import './Home.scss'
 import UploadData from '../../components/upload data pop up/UploadData'
 import DeleteData from '../../components/delete data pop up/DeleteData'
 
+
+
 function Home({goToNextPage, logo}) {
 	const [clicks, setClicks] = useState(0)
 	const [openUploadPopUp, setOpenUploadPopUp] = useState(false)
