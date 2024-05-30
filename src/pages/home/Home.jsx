@@ -40,7 +40,7 @@ function Home({goToNextPage, logo}) {
         	<img src={logo} />
         </div>
         <div className="title-section">
-			<h1>¡Bienvenido!</h1>
+			<h1>¡Hola!</h1>
 			<h2>Preparate para demostrar cuánto sabés sobre Seguros Agro</h2>
         </div>
         <div className="button-section">
