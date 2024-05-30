@@ -17,7 +17,7 @@
       ]
     },
     {
-      "question": "Cual es el límite de indemnización por evento y vigencia por el adicional de RC?",
+      "question": "Cuál es el límite de indemnización por evento y vigencia por el adicional de RC?",
       "options": [
         "Suma Asegurada del Adicional indicado en póliza",
         "Suma Asegurada del Adicional indicado en póliza + 1 reposición",
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "question": "Nacion Seguros ofrece sus seguros agrícolas en:",
+      "question": "Nación Seguros ofrece sus seguros agrícolas en:",
       "options": [
         "Buenos Aires, Santa Fe y La Pampa",
         "Buenos Aires, Santa Fe y Córdoba",
@@ -143,9 +143,9 @@
     {
       "question": "Como puedo cotizar un seguro de granizo:",
       "options": [
-        "En cualquier sucursal del Banco de la Nacion Argentina",
+        "En cualquier sucursal del Banco de la Nación Argentina",
         "Por medio de su Productor Asesor de Seguros",
-        "Directamente en las Sucursales de Nacion Seguros",
+        "Directamente en las Sucursales de Nación Seguros",
         "Todas anteriores"
       ]
     }
