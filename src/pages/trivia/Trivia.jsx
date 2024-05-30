@@ -90,12 +90,12 @@ function Trivia({topic, goToNextPage, intervalTime, questions, setQuestionInfo, 
   const checkAnswer = (answer) => {
     if(answer === actualCorrect){
       setHasAnsweredCorrect(true)
-      setAnswers(prev => ({...prev, [actualQuestion]: 1})) //Puede ser borrado si no se quiere guardar las respuestas
+      setAnswers(prev => ({...prev, [removeSpecialCharacters(actualQuestion)]: 1})) //Puede ser borrado si no se quiere guardar las respuestas
       setQuestionInfo(prev => ({...prev, correct: prev.correct + 1, total: prev.total + 1}))
     }
     else{
       setHasAnsweredCorrect(false)
-      setAnswers(prev => ({...prev, [actualQuestion]: 0})) //Puede ser borrado si no se quiere guardar las respuestas
+      setAnswers(prev => ({...prev, [removeSpecialCharacters(actualQuestion)]: 0})) //Puede ser borrado si no se quiere guardar las respuestas
       setQuestionInfo(prev => ({...prev, total: prev.total + 1}))
     }
     clearInterval(intervalRef.current)
@@ -122,18 +122,27 @@ function Trivia({topic, goToNextPage, intervalTime, questions, setQuestionInfo, 
   const modifyJSON = (actualAnswers) => {
     const transformedResponses = localStorage.getItem('answers') == null ? {} : JSON.parse(localStorage.getItem('answers'));
     for (const [question, answer] of Object.entries(actualAnswers)) {
-      if (!transformedResponses[question]) {
-        transformedResponses[question] = { correctas: answer, total: 1 };
+      if(!transformedResponses[topic]){
+        transformedResponses[topic] = {};
+      }
+      if (!transformedResponses[topic][question]) {
+        transformedResponses[topic][question] = { correctas: answer, total: 1 };
       }
       else{
-        transformedResponses[question]["total"] += 1;
-        transformedResponses[question]["correctas"] += answer;
+        transformedResponses[topic][question]["total"] += 1;
+        transformedResponses[topic][question]["correctas"] += answer;
       }
     }
     return transformedResponses;
   }
 
+  function removeSpecialCharacters(string) {
+    var result = string.replace(/[.\/[\]()]/g, '');
+    return result;
+  }
+
   // *******************
+
 
   return (
     <div className='trivia-page'>
