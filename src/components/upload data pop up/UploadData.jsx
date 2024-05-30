@@ -37,7 +37,7 @@ function UploadData({closePopUp}) {
             });
         }
         catch(e){
-            console.log(e)
+            setMessage('Error al subir los datos')
             setSubiendo(false)
         }
     }
