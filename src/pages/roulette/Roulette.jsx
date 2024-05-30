@@ -67,7 +67,7 @@ function Roulette({goToNextPage, questions, setTopic, logo}) {
             outerBorderColor={'#0062AD'}
             radiusLineWidth={0}
             radiusLineColor='white'
-            fontSize={25}
+            fontSize={18}
             spinDuration={0.5}
             pointerProps={{style:{width: '20%', top: '1dvh', right: '1dvh'}}}
             innerRadius={0}

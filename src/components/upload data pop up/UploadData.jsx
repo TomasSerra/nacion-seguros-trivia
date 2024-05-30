@@ -25,6 +25,7 @@ function UploadData({closePopUp}) {
                 setSubiendo(false)
                 return;
             }
+
             updates[postKey] = JSON.parse(localStorage.getItem('answers'));
             update(ref(db), updates).then(() => {
                 setMessage('Datos subidos correctamente')
@@ -36,7 +37,7 @@ function UploadData({closePopUp}) {
             });
         }
         catch(e){
-            setMessage(e)
+            console.log(e)
             setSubiendo(false)
         }
     }
