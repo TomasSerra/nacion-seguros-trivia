@@ -11,7 +11,7 @@ function Roulette({goToNextPage, questions, setTopic, logo}) {
   const [rotate, setRotate] = useState(false);
   const [data, setData] = useState([]);
 
-  const colors = ["#FEA700", "#C35AF4", "#F04B1D", "#B3E544"];
+  const colors = ["#FEA700", "#C35AF4", "#B3E544", "#B3E544"];
 
   //Bloquear click derecho
   useEffect(() => {
