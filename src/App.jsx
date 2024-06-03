@@ -21,16 +21,15 @@ function App() {
 
   useEffect(() => {
     bloquearGestos()
-    if(localStorage.getItem('postKey') === null){
-      const db = getDatabase(app);
-      const newPostKey = push(child(ref(db), '/')).key;
-      localStorage.setItem('postKey', newPostKey)
-    }
-
   }, [])
 
   useEffect(() => {
     if(page === 0){
+      if(localStorage.getItem('postKey') === null && navigator.onLine){
+        const db = getDatabase(app);
+        const newPostKey = push(child(ref(db), '/')).key;
+        localStorage.setItem('postKey', newPostKey)
+      }
       setQuestions({total: 0,
         correct: 0
       });
