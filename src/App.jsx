@@ -44,7 +44,7 @@ function App() {
     <>
       {page === 0 && <Home goToNextPage={() => {setPage(1)}} logo={Logo}/>}
       {page === 1 && <Roulette goToNextPage={() => {setPage(2)}} questions={Questions} setTopic={setTopic} logo={Logo}/>}
-      {page === 2 && <Trivia topic={topic} intervalTime={3} goToNextPage={() => {setPage(3)}} questions={Questions} setQuestionInfo={setQuestions} questionTime={30} numberOfQuestions={3} logo={Logo}/>}
+      {page === 2 && <Trivia topic={topic} intervalTime={3} goToNextPage={() => {setPage(3)}} questions={Questions} setQuestionInfo={setQuestions} questionTime={40} numberOfQuestions={3} logo={Logo}/>}
       {page === 3 && <End goToNextPage={() => {setPage(4)}} totalQuestions={questions.total} correctQuestions={questions.correct} logo={Logo}/>}
       {page === 4 && <QR goToNextPage={() => {setPage(0)}} logo={Logo}/>}
     </>
