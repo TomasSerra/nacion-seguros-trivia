@@ -1,0 +1,33 @@
+.piece{
+    padding-bottom: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    background: -moz-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 100%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ebebeb",GradientType=1);
+    border: solid white 3px;
+    border-radius: 3.5vw;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.103);
+    background-size: 50%;
+
+    &:focus{
+        border: none;
+        outline: none;
+    }
+
+    .image{
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 5%;
+        z-index: 2;
+        transform : rotateY(180deg);
+        border-radius: 2.5vw;
+        background-size: cover;
+        background-position: center;
+    }
+}
