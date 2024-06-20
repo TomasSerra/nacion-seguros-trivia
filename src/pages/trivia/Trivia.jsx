@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 import './Trivia.scss'
-import TimeBar from '../../components/timeBar/TimeBar'
+import TimeBar from '../../components/time bar/TimeBar'
 
 function Trivia({topic, goToNextPage, intervalTime, questions, setQuestionInfo, questionTime, numberOfQuestions=questions[topic].length, logo}) {
   const [actualQuestion, setActualQuestion] = useState('')

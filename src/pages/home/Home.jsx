@@ -5,7 +5,7 @@ import DeleteData from '../../components/delete data pop up/DeleteData'
 
 
 
-function Home({goToNextPage, logo}) {
+function Home({setPage, logo}) {
 	const [clicks, setClicks] = useState(0)
 	const [openUploadPopUp, setOpenUploadPopUp] = useState(false)
 	const [openDeletePopUp, setOpenDeletePopUp] = useState(false)
@@ -44,7 +44,9 @@ function Home({goToNextPage, logo}) {
 			<h2>Preparate para demostrar cuánto sabés sobre Seguros Agro</h2>
         </div>
         <div className="button-section">
-            <button onClick={goToNextPage}>Empezar</button>
+			<h2>¿Qué deseas jugar?</h2>
+            <button onClick={()=>{setPage(1)}}>Trivia</button>
+			<button onClick={()=>{setPage(3)}}>Memotest</button>
         </div>
     </div>
   )
